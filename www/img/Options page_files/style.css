@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;700&family=Lato:wght@300;400;700&family=Montserrat&display=swap');
+
+/*reset, para que controlemos los estilos*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+
+}
+/*style*/
+html,
+body{
+font-family: 'Comfortaa', cursive;
+background-color: #F8F7F5;
+/*color es para el color del texto*/
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*rem = 16 pixeles*/
+h1 { font-size: 2.5rem; }
+h4 { font-size: 1.5rem; }
+
+h1,
+h4,
+p {
+    line-height: 1.4em;
+}
+
+
+p{
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color:#F8F7F5;
+}
+
+#link-whats {
+    text-decoration: none;
+    color:#0A0A0A;
+}
+
+#nombre_info {
+    color: #F06C4E;
+}
+
+#ubi{
+    color: #F8F7F5;
+}
+/*          INFO SLIDER         */
+
+#info-slider {
+    font-family: sans-serif;
+    margin: auto;
+    background-color: #F8F7F5;
+    max-width: 800px;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#info-slider>ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#info-slider>ul.slider {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    height: 300px;
+}
+#info-slider>ul.slider h1 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%, -50%);
+}
+
+#info-slider>ul.slider li {
+    position: absolute;/*están encimados unos con otros*/
+    left: 0;
+    top: 0;
+    opacity:0;
+    width: inherit;
+    height: inherit;
+    background-color: #F8F7F5;
+    transition: opacity .5s;
+}
+
+#info-slider>ul.slider img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#info-slider>ul.slider li:first-child {
+    opacity: 1;
+}
+
+#info-slider>ul.slider li:target {
+    opacity: 1;
+    /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+#info-slider>.menu {
+    text-align: center;
+    margin: 20px;
+}
+#info-slider>.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+#info-slider>.menu li a {
+    display: inline-block;
+    color: grey;
+    text-decoration: none;
+    background-color: grey;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    border-radius: 100%;
+    
+}
+
+/*        CLASES          */
+/*contenedor, espacio que se le da a los lados*/
+.container {
+    margin: auto;
+    max-width: 1300px;
+    overflow: auto;
+    padding: 0 10px;
+}
+
+.container-slider {
+    background-color: #0A0A0A;
+
+}
+
+.btn {
+    display: inline-block;
+    font-size: 10px;
+    padding: 13px 20px;
+}
+
+.btn-info{
+    background: #FFD7D2;
+    border-radius: 20px;
+    color:#F8F7F5;
+    border: 2px solid #FFD7D2;
+
+}
+.btn-send{
+    background: #F06C4E;
+    border-radius: 20px;
+    color:#F8F7F5;
+    border: 2px solid #F06C4E;
+
+}
+
+
+/*          FEATURE SECTION         */
+
+.feature{
+    min-height:100vh;
+    background:#f9f9f9;
+   
+  }
+  
+  .feature .card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+   
+  }
+  
+  .feature .card-container .card{
+    width:30rem;
+    margin:2rem;
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .feature .card-container .card img{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .feature .card-container .content{
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .feature .card-container .content .title{
+    color:#0098a1;
+    font-size: 3rem;
+  }
+  
+  .feature .card-container .content p{
+    color:#333;
+    font-size: 1.3rem;
+    padding:1rem;
+  }
+  
+  .feature .card-container .content .stars i{
+    padding:0 .2rem;
+    font-size: 2rem;
+    color:gold;
+  }
+  
+  .feature .card-container .content .btn{
+    font-family: 'Comfortaa', cursive;
+    font-size: 1rem;
+    margin-top: 1.4rem;
+    height:3.5rem;
+    width:12rem;
+    border-radius: .5rem;
+    outline: none;
+    border:none;
+    background: #439966;
+    color:#fff;
+    cursor: pointer;
+    transition: .2s linear;
+  }
+  
+  .feature .card-container .content .btn:hover{
+    background: none;
+    border:.2rem solid #439966;
+    color:#439966;
+  }
+
+
+/*          FORM            */
+
+
+
+form label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+form .form-group{
+    margin-bottom: 1rem;
+
+}
+
+form .form-control{
+    display:block;
+    width: 100%;
+    padding: .375rem .7rem;
+    font-size: 0.5rem;
+    border: white;
+}
+
+
+
+
+/*se utiliza # porque es un identificador y lo tenemos como id*/
+
+#navbar{
+    overflow: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #0A0A0A;
+    color: #F8F7F5;
+}
+
+
+#navbar .logo {
+    float: left;
+    padding-top: 16px;
+    font-size: 25px;
+
+}
+
+#navbar ul {
+    list-style: none;
+    float: right;
+}
+
+#navbar ul li {
+    float: left;
+}
+
+#navbar ul li a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+/*          SHOWCASE        */
+#showcase {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#showcase img {
+    width: 50%;
+
+}
+
+#showcase p{
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+#location {
+    background: #439966;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 10px;
+}
+
+
+#container-slider {
+    background:black;
+}
+
+
+/*      CONTACTO      */
+
+#contact {
+padding-top: 100px;
+padding-bottom: 100px;
+}
+
+#contact h4{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#contact form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#contact button{
+    width: 100%;
+}
+
+/*       footer      */
+#mainfooter{
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+.welcome-text img {
+    text-align: center;
+    width: 80%;
+    height: 80%;
+}
+.welcome-text h3 {
+    text-align: center;
+    padding: 0px;
+   
+}
